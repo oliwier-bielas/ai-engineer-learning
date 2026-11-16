@@ -1,0 +1,26 @@
+[
+    {
+        "nadawca": "anna@firma.pl",
+        "temat": "Faktura za październik",
+        "tresc": "W załączniku faktura.",
+        "przeczytany": false
+    },
+    {
+        "nadawca": "szef@firma.pl",
+        "temat": "Pilne: spotkanie jutro",
+        "tresc": "Spotkanie o 9:00.",
+        "przeczytany": true
+    },
+    {
+        "nadawca": "sklep@promo.pl",
+        "temat": "Promocja -50%",
+        "tresc": "Tylko dziś!",
+        "przeczytany": false
+    },
+    {
+        "nadawca": "anna@firma.pl",
+        "temat": "Pilne: poprawka faktury",
+        "tresc": "Błąd w kwocie.",
+        "przeczytany": false
+    }
+]
