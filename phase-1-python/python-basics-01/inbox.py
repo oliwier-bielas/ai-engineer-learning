@@ -8,7 +8,7 @@ class Inbox:
         self._emails: list[Email] = []
 
     def load_emails(self, path: str):
-        with open(path, "r") as file:
+        with open(path, "r", -1, "utf-8") as file:
             emails = json.load(file)
             for email in emails:
                 mappedEmail = self._map_email(email)
@@ -22,6 +22,9 @@ class Inbox:
             send_by=email["nadawca"]
         )
 
+    def get_emails(self) -> list[Email]:
+        return self._emails
+
     def all(self) -> int:
         return len(self._emails)
 
@@ -30,7 +33,7 @@ class Inbox:
             lambda email: name.lower() in email.topic.lower(), self._emails)
         return filtred_emails
 
-    def unread(self) -> list[str]:
+    def unread(self) -> list[Email]:
         filtred_emails = filter(
             lambda email: email.status == False, self._emails)
 
