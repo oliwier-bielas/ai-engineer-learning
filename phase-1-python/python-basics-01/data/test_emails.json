@@ -6,6 +6,24 @@
         "przeczytany": false
     },
     {
+        "nadawca": "szef@firma.pl",
+        "temat": "PILNE spotkanie",
+        "tresc": "Spotkanie o 9:00.",
+        "przeczytany": true
+    },
+    {
+        "nadawca": "ksiegowosc@firma.pl",
+        "temat": "Faktura za październik",
+        "tresc": "W załączniku faktura.",
+        "przeczytany": false
+    },
+    {
+        "nadawca": "newsletter@sklep.pl",
+        "temat": "Newsletter",
+        "tresc": "Nowości w tym tygodniu.",
+        "przeczytany": true
+    },
+    {
         "nadawca": "anna@firma.pl",
         "temat": "Pilne: poprawka faktury",
         "tresc": "",

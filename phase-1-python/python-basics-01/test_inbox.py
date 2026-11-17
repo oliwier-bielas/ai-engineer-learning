@@ -13,17 +13,15 @@ def inboxFixture() -> Inbox:
     return inbox
 
 
-def test_load_and_show_inbox_mails(inboxFixture):
-    assert inboxFixture.all() == 1
+def test_load_skips_invalid_emails(inboxFixture):
+    assert inboxFixture.all() == 4
 
 
 def test_filter_by_topic(inboxFixture):
-    inbox: Inbox = inboxFixture
-    emails: list[Email] = inbox.filtered_by_topic("Pilne")
-    assert len(emails) == 1
+    emails: list[Email] = inboxFixture.filtered_by_topic("Pilne")
+    assert len(emails) == 2
 
 
 def test_unread(inboxFixture):
-    inbox: Inbox = inboxFixture
-    unread = inbox.unread()
-    assert len(unread) == 1
+    unread = inboxFixture.unread()
+    assert len(unread) == 2
