@@ -4,8 +4,8 @@ from models import Email
 
 
 def get_emails_path() -> Path:
-    DATA_DIR = Path(__file__).parent / "data"
-    path = DATA_DIR / "emails.json"
+    DATA_DIR: Path = Path(__file__).parent / "data"
+    path: Path = DATA_DIR / "emails.json"
     return path
 
 
