@@ -22,5 +22,16 @@
         "temat": "Pilne: poprawka faktury",
         "tresc": "Błąd w kwocie.",
         "przeczytany": false
+    },
+    {
+        "nadawca": "anna@firma.pl",
+        "temat": "Pilne: poprawka faktury",
+        "tresc": "",
+        "przeczytany": false
+    },
+    {
+        "temat": "Pilne: poprawka faktury",
+        "tresc": "Błąd w kwocie.",
+        "przeczytany": false
     }
 ]
