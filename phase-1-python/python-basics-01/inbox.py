@@ -9,7 +9,7 @@ class Inbox:
     def __init__(self):
         self._emails: list[Email] = []
 
-    def load_emails(self, path: Path):
+    def load_emails(self, path: Path) -> None:
         with open(path, "r", encoding="utf-8") as file:
             emails: list[dict] = json.load(file)
             validated_emails: list[dict] = []
@@ -24,7 +24,7 @@ class Inbox:
             self._emails.extend([self._map_email(email)
                                 for email in validated_emails])
 
-    def _validate_email(self, email: dict):
+    def _validate_email(self, email: dict) -> None:
         required_fields = {"temat": "topic", "tresc": "content",
                            "przeczytany": "is_read", "nadawca": "send_by"}
         for key, value in required_fields.items():
