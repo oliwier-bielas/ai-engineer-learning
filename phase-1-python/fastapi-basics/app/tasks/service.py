@@ -14,7 +14,7 @@ class TaskService:
         ]
 
     def get_all(self) -> list[TaskRead]:
-        return self._tasks
+        return list(self._tasks)
 
     def get_by_id(self, task_id: int) -> TaskRead:
         task: TaskRead | None = next(
