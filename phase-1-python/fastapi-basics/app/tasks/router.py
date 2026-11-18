@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, status
 from .schemas import TaskRead, TaskBase
 from .service import task_service
 router = APIRouter(prefix="/tasks", tags=["tasks"])
@@ -12,7 +12,7 @@ def list_tasks() -> list[TaskRead]:
 
 @router.get("/{task_id}")
 def get_task_by_id(task_id: int) -> TaskRead:
-    task: TaskRead | None = task_service.get_by_id(task_id)
+    task: TaskRead = task_service.get_by_id(task_id)
     return task
 
 
