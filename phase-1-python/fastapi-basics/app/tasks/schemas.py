@@ -1,11 +1,10 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
-class TaskRead(BaseModel):
+class TaskBase(BaseModel):
+    title: str = Field(min_length=1, max_length=100)
+
+
+class TaskRead(TaskBase):
     id: int
-    title: str
-    done: bool
-
-class TaskAdd(BaseModel):
-    title:str
     done: bool = False
